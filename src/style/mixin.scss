@@ -1,0 +1,30 @@
+// 背景色
+$color:#f3f3f3;
+// 主体色
+$themeColor:#eb6519;
+// 设置宽高
+@mixin wh($width, $heght) {
+    width: $width;
+    height: $heght;
+}
+
+// 设置字体大小、行高
+@mixin ft($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+}
+
+// 定位上下左右居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 高度，行高，文字居中
+@mixin tcenter($height, $lineheight) {
+    height: $height;
+    line-height: $lineheight;
+    text-align: center;
+}

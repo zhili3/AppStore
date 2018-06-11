@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-1.4.1.js"></script>
+    <script type="text/javascript">
+        //字数限制
+        window.onload = function() {
+            //（document）
+            document.getElementById('note').onkeyup = function() {
+                    document.getElementById('text-count').innerHTML = this.value.length;
+                }
+                //（jquery）
+            $('#note2').keyup(function() {
+                //    var val=$('#note2').val();
+                //    var len=val.length;
+                var len = this.value.length
+                $('#text-count2').text(len);
+
+            })
+        }
+    </script>
+    <div>
+        <textarea cols="40" rows="5" id="note" name="note" maxlength="100" value="" onkeyup="this.value=this.value.substring(0, 100)" placeholder="最多可输入100字"></textarea>
+        <span id="text-count" value="">0</span>/100
+    </div>
+    <div>
+        <textarea cols="40" rows="5" id="note2" name="note2" maxlength="100" value="" onkeyup="this.value=this.value.substring(0, 100)" placeholder="最多可输入100字"></textarea>
+        <span id="text-count2" value="">0</span>/100
+    </div>
+</body>
+
+</html>

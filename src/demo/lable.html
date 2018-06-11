@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <label for="input">
+            <input id="input" type="checked" checked />label
+        </label>
+        <script>
+            var label = document.getElementsByTagName("label")[0];
+            var input = document.getElementById("input");
+            label.addEventListener("click", function () {
+                alert("label");
+            }, false);
+            input.addEventListener("click", function (e) {
+                alert("input");
+            }, false);
+        </script>
+    </body>
+</body>
+</html>
